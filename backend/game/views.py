@@ -4,6 +4,7 @@ from rest_framework import status
 from .serializers import SimulationInputSerializer, SimulationResultSerializer, CRAMetadataSerializer
 from .market_engine import TaxationMarketEngine
 from .compliance import generate_cra_metadata
+from .badges import issue_fiscal_architect_badge
 from drf_yasg.utils import swagger_auto_schema
 
 class SimulateView(APIView):
@@ -19,6 +20,12 @@ class SimulateView(APIView):
 
             engine = TaxationMarketEngine()
             result = engine.calculate_fiscal_impact(tax_rate, spending_plan)
+            
+            # Badge Logic Integration
+            if result['status'] == 'balanced_budget':
+                # Check if eligible for badge
+                badge_awarded = issue_fiscal_architect_badge(result.get('score', 0))
+                result['badge_awarded'] = badge_awarded
             
             return Response(result, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)

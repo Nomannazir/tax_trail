@@ -2,6 +2,13 @@
 
 This directory contains the Django backend for the "Tax Trail" game module. It handles the game logic (TaxationMarketEngine), CRA metadata compliance generation, and provides APIs for the frontend.
 
+## Life Hub Alignment Notes
+
+- Infiniti AI™ Coach is implemented as a rule-based engine (Gemini-ready).
+- CRA compliance metadata follows Life Hub / CRA schema with placeholder values.
+- Badge issuance logic is implemented as a trigger-ready stub.
+- Backend is designed as a standalone Django app for easy migration into Life Hub core services.
+
 ## Prerequisites
 - Python 3.12+
 - `pip` (Python package manager)
