@@ -1,7 +1,7 @@
 from rest_framework import serializers
 
 class SimulationInputSerializer(serializers.Serializer):
-    tax_rate = serializers.FloatField(min_value=0.0, max_value=1.0, help_text="Tax rate as a decimal (e.g., 0.15 for 15%)")
+    tax_rate = serializers.FloatField(min_value=0.0, max_value=0.6, help_text="Tax rate as a decimal (e.g., 0.15 for 15%). Max constrained to 60%.")
     spending_plan = serializers.JSONField(required=False, help_text="Optional breakdown of spending", default={})
 
 class SimulationResultSerializer(serializers.Serializer):

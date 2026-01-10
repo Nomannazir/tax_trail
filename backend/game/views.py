@@ -25,7 +25,7 @@ class SimulateView(APIView):
             if result['status'] == 'balanced_budget':
                 # Check if eligible for badge
                 badge_awarded = issue_fiscal_architect_badge(result.get('score', 0))
-                result['badge_awarded'] = badge_awarded
+                result['badge_eligible'] = badge_awarded
             
             return Response(result, status=status.HTTP_200_OK)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
