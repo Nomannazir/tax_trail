@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* Life Hub Palette */
+  --color-background: #f5f6fc;
+  /* Light Cool Grey - FLAT Background */
+  --color-foreground: #19173b;
+  /* Dark Navy text */
+  --color-primary: #5A49F8;
+  /* Brand Blurple */
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #12FEA2;
+  /* Neon Mint */
+  --color-secondary-foreground: #140442;
+  --color-navy: #140442;
+  /* Midnight Navy */
+  --color-muted: #6A6A8B;
+  /* Muted Blue-Grey */
+
+  /* Input Background Rules */
+  --color-input-bg: hsla(158, 100%, 51%, 0.12);
+  /* Tinted Neon Mint (#12FEA2 at 12%) */
+  --color-border-light: #f5f6fc;
+
+  /* Gradients */
+  --image-header-surface: linear-gradient(to right, #e6f7fa, #ebe5ff, #ffeefd);
+
+  /* Fonts */
+  --font-sans: var(--font-poppins), sans-serif;
+
+  /* Shadows (Glow System) - Colored Lift Effects */
+  --shadow-glow-primary: 0 10px 20px 0 rgba(90, 73, 248, 0.20);
+  /* Surface Card */
+  --shadow-glow-high: 0 20px 45px rgba(82, 63, 255, 0.12);
+  /* High Float */
+  --shadow-glow-accent: 0 0 15px rgba(18, 254, 162, 0.4);
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  @apply bg-white/10 backdrop-blur-sm border border-white/60;
+}
+
+.card-hover {
+  @apply transition-transform duration-300 hover:scale-[1.02];
+}
+
+body {
+  @apply bg-background text-foreground font-sans;
+}

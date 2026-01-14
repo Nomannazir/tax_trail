@@ -31,9 +31,9 @@ class TaxationMarketEngine:
         if fiscal_ratio < 0.7:
             result["status"] = "under_funded"
             result["coach_message"] = (
-                "🚨 **Budget Deficit Alert!** 🚨\n\n"
+                "<b>Budget Deficit Alert!</b>\n\n"
                 "Your tax revenue is too low to cover essential services like schools and road maintenance. "
-                "This is called a **Budget Deficit**. Try increasing the tax rate slightly to ensure our community has what it needs!"
+                "This is called a <b>Budget Deficit</b>. Try increasing the tax rate slightly to ensure our community has what it needs!"
             )
         elif fiscal_ratio > 1.5:
             # Check if rate > 40% of small business income logic from spec
@@ -44,14 +44,14 @@ class TaxationMarketEngine:
             
             result["status"] = "excessive_taxation"
             result["coach_message"] = (
-                "📉 **Economic Warning!** 📉\n\n"
+                "<b>Economic Warning!</b>\n\n"
                 "Whoa! Taxes are very high. This puts a strain on local businesses, giving them less money to grow and hire people. "
                 "This can stall the economy. Try lowering the tax rate to encourage growth!"
             )
         else:
             result["status"] = "balanced_budget"
             result["coach_message"] = (
-                "🎉 **Fiscal Architect Achievement!** 🎉\n\n"
+                "<b>Fiscal Architect Achievement!</b>\n\n"
                 "Perfect balance! You've raised enough revenue to fund public services without overburdening the economy. "
                 "You've earned $3.50 on your Life Hub Visa Rewards Card!"
             )
