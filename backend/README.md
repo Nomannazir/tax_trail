@@ -17,24 +17,25 @@ This directory contains the Django backend for the "Tax Trail" game module. It h
 
 1.  **Navigate to the project root:**
     ```bash
-    cd d:/upwork/projects/tax_trail
+    cd tax_trail
     ```
 
-2.  **Activate Virtual Environment:**
+2.  **Setup Virtual Environment:**
     ```bash
     # Windows
+    python -m venv venv
     venv\Scripts\activate
     ```
 
 3.  **Install Dependencies:**
     ```bash
-    pip install -r backend/requirements.txt
+    cd backend
+    pip install -r requirements.txt
     ```
     *(Note: If strict requirements file doesn't exist, ensure `django`, `djangorestframework`, `drf-yasg`, `django-cors-headers` are installed)*.
 
 4.  **Run Migrations:**
     ```bash
-    cd backend
     python manage.py migrate
     ```
 

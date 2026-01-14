@@ -6,7 +6,7 @@ This is the frontend for the "Tax Trail" game module, built with Next.js 15, Tai
 
 1.  **Navigate to directory:**
     ```bash
-    cd d:/upwork/projects/tax_trail/frontend
+    cd tax_trail/frontend
     ```
 
 2.  **Install dependencies:**
