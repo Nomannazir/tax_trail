@@ -6,6 +6,7 @@ import { Slider } from "./ui/Slider";
 import { AICoach } from "./AICoach";
 import { VisaCard } from "./VisaCard";
 import { Badge } from "./Badge";
+import Image from "next/image";
 
 export const TaxGame: React.FC = () => {
     // State
@@ -63,7 +64,8 @@ export const TaxGame: React.FC = () => {
                         {/* Game Board / City Map Placeholder */}
                         <div className="relative aspect-video bg-white rounded-3xl border border-indigo-100 overflow-hidden flex flex-col items-center justify-center group shadow-glow-high">
                             <div className={`w-16 h-16 mb-4 rounded-full flex items-center justify-center text-2xl transition-colors duration-500 ${result?.status === 'balanced_budget' ? 'bg-secondary/20 text-secondary' : 'bg-muted/10 text-muted/50'}`}>
-                                🏛️
+                                <Image src="/icons/building.png" alt="Building" width={128} height={128} />
+
                             </div>
                             <h3 className="text-lg font-semibold text-navy/80">Community Map</h3>
                             <p className="text-xs text-muted max-w-[200px] text-center mt-2">
@@ -76,7 +78,7 @@ export const TaxGame: React.FC = () => {
                         {/* Controls */}
                         <div className="bg-white p-8 rounded-3xl shadow-glow-primary border border-white space-y-6">
                             <h2 className="text-lg font-bold text-navy flex items-center gap-2">
-                                <span className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center text-primary text-xl">🏢</span>
+                                <Image src="/icons/Fiscal.png" alt="Building" width={36} height={36} />
                                 Fiscal Controls
                             </h2>
 
@@ -109,7 +111,7 @@ export const TaxGame: React.FC = () => {
                         <div className="bg-white p-8 rounded-3xl border border-white relative overflow-hidden shadow-glow-primary">
                             <div className="relative z-10 space-y-8">
                                 <h3 className="text-sm font-bold text-navy uppercase tracking-wider flex items-center gap-2">
-                                    <span className="text-lg">🏆</span>
+                                    <Image src="/icons/trophy.png" alt="Trophy" width={36} height={36} />
                                     Your Wallet
                                 </h3>
 
